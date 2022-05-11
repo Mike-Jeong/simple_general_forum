@@ -27,9 +27,9 @@ const App = () => {
 
         <div className="content">
           <Routes>
-            <Route exact="true" path="/" component={Home} />
-            <Route path="/ArticleList" component={ArticleList} />
-            <Route path="/SubmitArticle" component={SubmitArticle} />
+            <Route exact="true" path="/" element={<Home />} />
+            <Route path="/ArticleList" element={<ArticleList />} />
+            <Route path="/SubmitArticle" element={<SubmitArticle />} />
           </Routes>
         </div>
       </div>
