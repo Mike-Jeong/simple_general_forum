@@ -2,6 +2,7 @@ import React from "react";
 
 import {
   Route,
+  Redirect,
   Routes,
   NavLink,
   BrowserRouter as Router,
@@ -26,11 +27,14 @@ const App = () => {
         </ul>
 
         <div className="content">
+
           <Routes>
             <Route exact="true" path="/" element={<Home />} />
             <Route path="/ArticleList" element={<ArticleList />} />
             <Route path="/SubmitArticle" element={<SubmitArticle />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
+
         </div>
       </div>
     </Router>
