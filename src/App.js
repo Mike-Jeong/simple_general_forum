@@ -2,7 +2,6 @@ import React from "react";
 
 import {
   Route,
-  Redirect,
   Routes,
   NavLink,
   BrowserRouter as Router,
@@ -19,7 +18,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <h1>민식이의 익명 게시판 프로젝트(프로젝트 명 미정…)</h1>
+        <h1>Unknowng &#128123;</h1>
         <ul className="header">
           <li><NavLink exact="true" to="/">메인 화면</NavLink></li>
           <li><NavLink to="/ArticleList">게시판 목록</NavLink></li>
