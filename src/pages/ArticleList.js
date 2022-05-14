@@ -1,7 +1,8 @@
+import React from "react";
 import articles from "../dummydata/articles.js";
 import Styles from "../components/tablestyle.js";
 import Table from "../components/posttable";
-import tablecolumns from "../components/tablecolumns.js";
+import {tablecolumns} from "../components/tablecolumns.js";
 
  
 const ArticleList = () => {

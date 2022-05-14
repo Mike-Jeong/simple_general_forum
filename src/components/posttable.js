@@ -1,52 +1,52 @@
 import React from "react";
-import { useTable} from 'react-table';
+import { useTable } from 'react-table';
 
-const Table = ({columns, data}) => {
+const Table = ({ columns, data }) => {
     const {
         getTableProps,
         getTableBodyProps,
         headerGroups,
         prepareRow,
-        page, 
-      } = useTable(
+        page,
+        rows,
+    } = useTable(
         {
-          columns,
-          data,
+            columns,
+            data
         },
-      )
+    )
 
 
-      return (
+    return (
         <>
-          <table {...getTableProps()}>
-            <thead>
-              {headerGroups.map(headerGroup => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
-                  {headerGroup.headers.map(column => (
-                    <th {...column.getHeaderProps()}>
-                      {column.render('Header')}
-                    </th>
-                  ))}
-                </tr>
-              ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-              {page.map((row, i) => {
-                prepareRow(row)
-                return (
-                  <tr {...row.getRowProps()}>
-                    {row.cells.map(cell => {
-                      return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+            <table {...getTableProps()}>
+                <thead>
+                    {headerGroups.map(headerGroup => (
+                        <tr {...headerGroup.getHeaderGroupProps()}>
+                            {headerGroup.headers.map(column => (
+                                <th {...column.getHeaderProps()}>
+                                    {column.render('Header')}
+                                </th>
+                            ))}
+                        </tr>
+                    ))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                    {rows.map((row, i) => {
+                        prepareRow(row)
+                        return (
+                            <tr {...row.getRowProps()}>
+                                {row.cells.map(cell => {
+                                    return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                })}
+                            </tr>
+                        )
                     })}
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>  
+                </tbody>
+            </table>
         </>
-    
-      )
-    };
-      
-      export default Table;
-    
+
+    )
+};
+
+export default Table;
