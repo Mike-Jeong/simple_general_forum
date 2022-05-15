@@ -1,5 +1,5 @@
 import React from "react";
-import { useTable, useSortBy} from 'react-table';
+import { useTable, useSortBy } from 'react-table';
 
 const Table = ({ columns, data }) => {
     const {
@@ -27,6 +27,13 @@ const Table = ({ columns, data }) => {
                             {headerGroup.headers.map(column => (
                                 <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                                     {column.render('Header')}
+                                    <span>
+                                        {column.isSorted
+                                            ? column.isSortedDesc
+                                                ? ' 🔽'
+                                                : ' 🔼'
+                                            : ''}
+                                    </span>
                                 </th>
                             ))}
                         </tr>
