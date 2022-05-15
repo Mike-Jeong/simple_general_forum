@@ -2,6 +2,8 @@ export const tablecolumns = [
     {
         Header: '게시글 id',
         accessor: 'id',
+        sortable: true,
+        
     }, {
         Header: '작성자',
         accessor: 'authors',
@@ -11,5 +13,6 @@ export const tablecolumns = [
     }, {
         Header: '작성일',
         accessor: 'createdate',
+        sortable: true,
     }
 ];
