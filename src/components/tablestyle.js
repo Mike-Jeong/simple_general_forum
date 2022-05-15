@@ -14,6 +14,7 @@ const Styles = styled.div `
     }
     th,
     td {
+      text-align: center;
       margin: 0;
       padding: 1rem;
       border-bottom: 1px solid black;

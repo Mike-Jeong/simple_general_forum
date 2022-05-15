@@ -22,7 +22,7 @@ const App = () => {
         <ul className="header">
           <li><NavLink exact="true" to="/">메인 화면</NavLink></li>
           <li><NavLink to="/ArticleList">게시판 목록</NavLink></li>
-          <li><NavLink to="/SubmitArticle">게시판 등록</NavLink></li>
+          <li><NavLink to="/SubmitArticle">게시글 등록</NavLink></li>
         </ul>
 
         <div className="content">
