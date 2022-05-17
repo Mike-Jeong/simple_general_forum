@@ -8,7 +8,7 @@ import {tablecolumns} from "../components/tablecolumns.js";
 const ArticleList = () => {
   return (
     <div>
-      <h2>테이블 생성!!!</h2>
+      <h2>게시글 목록</h2>
              <Styles>
                <Table
                 data={articles}

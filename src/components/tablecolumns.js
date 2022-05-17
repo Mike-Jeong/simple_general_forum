@@ -9,6 +9,9 @@ export const tablecolumns = [
     }, {
         Header: '작성자',
         accessor: 'authors',
+        maxWidth: 40,
+        minWidth: 40,
+        width: 40,
    
     }, {
         Header: '제목',
@@ -17,8 +20,8 @@ export const tablecolumns = [
         Header: '작성일',
         accessor: 'createdate',
         sortable: true,
-        maxWidth: 50,
-        minWidth: 50,
-        width: 50,
+        maxWidth: 40,
+        minWidth: 40,
+        width: 40,
     }
 ];
