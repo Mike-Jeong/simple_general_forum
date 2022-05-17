@@ -16,6 +16,7 @@ export const tablecolumns = [
     }, {
         Header: '제목',
         accessor: 'title',
+        Cell: ({row}) => <a href= {'/article/' + row.original.id} >{row.original.title}</a>
     }, {
         Header: '작성일',
         accessor: 'createdate',

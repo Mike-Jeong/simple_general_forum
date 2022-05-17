@@ -12,6 +12,7 @@ import './App.css';
 import Home from "./pages/Home";
 import ArticleList from "./pages/ArticleList";
 import SubmitArticle from "./pages/Submit-Article";
+import ViewArticle from "./pages/View-Article";
 import NotFoundPage from "./pages/404";
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
             <Route exact="true" path="/" element={<Home />} />
             <Route path="/ArticleList" element={<ArticleList />} />
             <Route path="/SubmitArticle" element={<SubmitArticle />} />
+            <Route path="/article/" element={<ViewArticle />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
 
