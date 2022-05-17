@@ -1,5 +1,6 @@
 import React from "react";
-import { useTable, useSortBy, usePagination } from 'react-table';
+import { useTable, useGlobalFilter, useSortBy, usePagination} from 'react-table';
+import Search from "./search";
 
 const Table = ({ columns, data }) => {
     const {
@@ -16,6 +17,7 @@ const Table = ({ columns, data }) => {
         nextPage,
         previousPage,
         setPageSize,
+        setGlobalFilter,
         state: { pageIndex, pageSize },
     } = useTable(
         {
@@ -23,13 +25,16 @@ const Table = ({ columns, data }) => {
             data,
             initialState: { pageIndex: 0, pageSize: 10},
         },
+        useGlobalFilter,
         useSortBy,
-        usePagination
+        usePagination,
+        
     )
 
 
     return (
         <>
+        <Search onSubmit={setGlobalFilter} />
             <table {...getTableProps()}>
                 <thead>
                     {headerGroups.map(headerGroup => (
