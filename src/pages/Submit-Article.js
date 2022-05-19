@@ -9,7 +9,7 @@ const SubmitArticle = () => {
                 <input className="title-input" type='text' placeholder='제목' />
                 <textarea className="text-area" placeholder='내용'></textarea>
             </div>
-            <button className="submit-button">입력</button>
+            <button className="submit-button">게시글 등록하기</button>
         </div>
     );
 }
