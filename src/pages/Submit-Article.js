@@ -1,15 +1,14 @@
 import React from "react";
-import './SubmitForm.css'
+import './SubmitForm.css';
+import SubmissionForm from "../components/SubmissionForm.js";
 
 const SubmitArticle = () => {
     return (
         <div>
             <h2>게시글 등록</h2>
             <div className='form-wrapper'>
-                <input className="title-input" type='text' placeholder='제목' />
-                <textarea className="text-area" placeholder='내용'></textarea>
+            <SubmissionForm/>
             </div>
-            <button className="submit-button">게시글 등록하기</button>
         </div>
     );
 }
